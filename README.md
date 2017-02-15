@@ -6,7 +6,7 @@ Collux是基于[collar.js](http://collarjs.com)的一个微信小程序开发库
 
 ## 架构
 
-使用Collux编写的小程序的架构就像一朵花。中心是微信小程序页面控制器，花瓣是每个页面的业务逻辑。 他们之间发送消息进行通信。
+使用Collux编写的小程序的架构就像一朵花。中心是微信小程序页面控制器，花瓣是每个页面的业务逻辑。 他们之间发送消息进行通信。他们之间的消息交互可以通过collar dev tool动态显示出来。见以下gif截图：
 
 ![data flow diagram](assets/data-flow.gif)
 
