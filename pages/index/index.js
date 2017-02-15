@@ -8,5 +8,14 @@ Page({
   onLoad: () => {
     // 发送加载消息
     viewSensor.send('ON_LOAD');
+  },
+  onClickTest: () => {
+    viewSensor.send('ON_CLICK_TEST');
+  },
+  onClickAbout: () => {
+    viewSensor.send('ON_CLICK_ABOUT');
+  },
+  onClickHelloWorld: () => {
+    viewSensor.send('ON_CLICK_HELLO_WORLD');
   }
 });

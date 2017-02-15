@@ -69,7 +69,7 @@ collux.use(new DevToolAddon({
 
 const app = collux.createApp('your app name');
 
-app.route('/test', test);
+app.route('test', test);  // 第一个参数是页面逻辑对应的页面名
 
 export default app;
 ```
@@ -101,10 +101,10 @@ collar-dev-server
 
 ## 如何使用
 
-1. 监听文件变化并打包代码
+- 监听文件变化并打包代码
 ```text
 npm run build
 ```
 
-2. 在微信Web开发者工具里调试
+- 在微信Web开发者工具里调试
 

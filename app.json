@@ -1,6 +1,9 @@
 {
   "pages":[
-    "pages/index/index"
+    "pages/index/index",
+    "pages/test/test",
+    "pages/about/about",
+    "pages/helloworld/helloworld"
   ],
   "window":{
     "backgroundTextStyle":"light",

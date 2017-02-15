@@ -1,4 +1,10 @@
 <view class="page">
     <image mode="aspectFit" src="{{avatarUrl}}"/>
     <text>{{nickName}}</text>
+
+    <view class="btn-group">
+        <button bindtap="onClickTest">切换到test页面</button>
+        <button bindtap="onClickAbout">切换到about页面</button>
+        <button bindtap="onClickHelloWorld">切换到hello world页面</button>
+    </view>
 </view>

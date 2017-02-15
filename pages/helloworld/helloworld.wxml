@@ -1,0 +1,3 @@
+<view class="page">
+    <text style="margin-top: 300rpx;">Hello World</text>
+</view>
