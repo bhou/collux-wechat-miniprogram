@@ -4,5 +4,8 @@ const viewSensor = biz.getViewSensor('about');
 
 Page({
   data: {
+  },
+  onShowSystemInfo: () => {
+    viewSensor.send('ON_SHOW_SYS_INFO')
   }
 });

@@ -13,9 +13,9 @@ export default function home(page) {
     })
     .to(page.viewUpdater);
 
-  page.when('ON_CLICK_TEST')
+  page.when('ON_CLICK_COUNTER')
     .map('set url', s => {
-      return s.set(Constants.URL, '/pages/test/test');
+      return s.set(Constants.URL, '/pages/counter/counter');
     })
     .to(page.navigate);
 

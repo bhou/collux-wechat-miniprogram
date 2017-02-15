@@ -4,5 +4,8 @@ const viewSensor = biz.getViewSensor('helloworld');
 
 Page({
   data: {
+  },
+  onShowGreeting: () => {
+    viewSensor.send('ON_SHOW_GREETING');
   }
 });

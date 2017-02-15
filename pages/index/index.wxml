@@ -3,8 +3,8 @@
     <text>{{nickName}}</text>
 
     <view class="btn-group">
-        <button bindtap="onClickTest">切换到test页面</button>
-        <button bindtap="onClickAbout">切换到about页面</button>
-        <button bindtap="onClickHelloWorld">切换到hello world页面</button>
+        <button bindtap="onClickCounter">计数器</button>
+        <button bindtap="onClickHelloWorld">Hello World!</button>
+        <button bindtap="onClickAbout">关于</button>
     </view>
 </view>

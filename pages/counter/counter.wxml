@@ -1,0 +1,8 @@
+<view class="page">
+    <text style="margin-top: 300rpx;">计数器</text>
+    <view class="counter-btns" style="margin-top: 100rpx;">
+        <button bindtap="onDecrement">-</button>
+        <text style="width: 4rem; text-align: center; font-size: 18pt;">{{count}}</text>
+        <button bindtap="onIncrement">+</button>
+    </view>
+</view>

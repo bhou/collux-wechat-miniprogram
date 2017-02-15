@@ -9,8 +9,8 @@ Page({
     // 发送加载消息
     viewSensor.send('ON_LOAD');
   },
-  onClickTest: () => {
-    viewSensor.send('ON_CLICK_TEST');
+  onClickCounter: () => {
+    viewSensor.send('ON_CLICK_COUNTER');
   },
   onClickAbout: () => {
     viewSensor.send('ON_CLICK_ABOUT');

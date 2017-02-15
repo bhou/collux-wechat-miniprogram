@@ -1,3 +1,6 @@
 <view class="page">
-    <text style="margin-top: 300rpx;">Hello World</text>
+    <text style="margin-top: 300rpx;">{{clicked ? '你好！' : '请点击按钮'}}</text>
+    <view class="counter-btns" style="margin-top: 100rpx;">
+        <button bindtap="onShowGreeting">显示问候</button>
+    </view>
 </view>

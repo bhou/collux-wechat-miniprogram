@@ -1,6 +1,6 @@
 import collux from './collux';
 import home from './view/home';
-import test from './view/test';
+import counter from './view/counter';
 import about from './view/about';
 import helloworld from './view/helloworld';
 
@@ -14,7 +14,7 @@ const app = collux.createApp('your app name');
 
 // 在这里添加新的view
 app.route('home', home);
-app.route('test', test);
+app.route('counter', counter);
 app.route('about', about);
 app.route('helloworld', helloworld);
 
