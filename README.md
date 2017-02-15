@@ -9,6 +9,7 @@ Collux是基于[collar.js](http://collarjs.com)的一个微信小程序开发库
 使用Collux编写的小程序的架构就像一朵花
 
 中心是微信小程序页面控制器，主要负责4个任务：
+
 1. 更新页面 (update page)
 2. 跳转页面 (redirect page)
 3. 切换页面 (navigate page)
@@ -21,8 +22,8 @@ Collux是基于[collar.js](http://collarjs.com)的一个微信小程序开发库
 
 ## 如何添加一个页面
 
-1. 在/pages目录下添加一个页面目录，比如 test。添加三个页面文件：test.js, test.wxml, test,wxss
-2. 编辑页面javascript文件，添加如下基本代码
+- 在/pages目录下添加一个页面目录，比如 test。添加三个页面文件：test.js, test.wxml, test,wxss
+- 编辑页面javascript文件，添加如下基本代码
 
 ```javascript
 import biz from '../../lib/bundle';
@@ -35,7 +36,7 @@ Page({
   }  
 });
 ```
-3. 添加业务逻辑主文件src/index.js
+- 添加业务逻辑主文件src/index.js
 ```javascript
 import collux from './collux';
 
@@ -49,13 +50,13 @@ const app = collux.createApp('your app name');
 
 export default app;
 ```
-4. 在src目录下添加页面对应的业务逻辑文件
+- 在src目录下添加页面对应的业务逻辑文件
 ```javascript
 export default function businessLogic(page) {
   return page;
 }
 ```
-5. 在src/index.js中，注册这个页面
+- 在src/index.js中，注册这个页面
 ```javascript
 import collux from './collux';
 import test from './test';
