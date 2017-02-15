@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor":"#f8f8f8",
+    "navigationBarTitleText":"微信小程序",
+    "navigationBarTextStyle":"black",
+    "backgroundColor":"#ffffff",
+    "enablePullDownRefresh": true
+  }
+}
