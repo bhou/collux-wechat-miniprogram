@@ -38,26 +38,27 @@ Page({
   }  
 });
 ```
-- 添加业务逻辑主文件src/index.js
-```javascript
-import collux from './collux';
+页面的代码文件不包含任何业务逻辑，他仅仅负责接受用户输入，然后通过viewSensor把消息发送给业务逻辑
 
-// 发布小程序的时候，请注释以下代码，
-import DevToolAddon from './devtool/DevToolAddon';
-collux.use(new DevToolAddon({
-  process: 'wechatapp',
-}));
-
-const app = collux.createApp('your app name');
-
-export default app;
-```
 - 在src目录下添加页面对应的业务逻辑文件
 ```javascript
 export default function businessLogic(page) {
   return page;
 }
 ```
+
+你可以在这个文件里面使用collar.js API添加业务逻辑数据流，比如：
+
+```javascript
+page.when('ON_LOAD')
+  .map('set init state', s => {
+    return s.set(Constants.STATE, {
+      // init state object
+    });
+  })
+  .to(page.viewUpdater);
+```
+
 - 在src/index.js中，注册这个页面
 ```javascript
 import collux from './collux';
