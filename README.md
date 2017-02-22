@@ -19,8 +19,9 @@ Collux是基于[collar.js](http://collarjs.com)的一个微信小程序开发库
 
 花瓣是每个页面的业务逻辑，负责处理页面产生的各种事件。你可以在业务逻辑中调用上面提到的4种页面控制任务。
 
-在你的页面内，可以通过页面传感器（viewSensor）向页面业务逻辑发送消息。
+在你的页面内，可以通过页面传感器（viewSensor）向页面业务逻辑发送消息。你可以在collar dev tool中查看每个业务逻辑的实时数据流：
 
+![data flow diagram](assets/data-flow-counter.gif)
 
 ## 如何添加一个页面
 
