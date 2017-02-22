@@ -110,39 +110,6 @@ function handleNode(node, options = {}) {
   return ret;
 }
 
-function handleVariable(node) {
-  return handleNode(node, {
-    style : {
-      shape : 'vee'
-    }
-  });
-}
-
-function handleFilter(node) {
-  return handleNode(node, {
-    style : {
-      'shape' : 'polygon',
-      'shape-polygon-points' : "-0.7 -1 0.7 -1 0.1 0 0.1 1 -0.1 1 -0.1 0"
-    }
-  });
-}
-
-function handleProcessor(node) {
-  return handleNode(node, {
-    style : {
-      'shape' : 'rectangle'
-    }
-  });
-}
-
-function handleActuator(node) {
-  return handleNode(node, {
-    style : {
-      'shape' : 'triangle'
-    }
-  });
-}
-
 function prepareNode(node, json) {
   json.push(handleNode(node));
 }

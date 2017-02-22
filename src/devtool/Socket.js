@@ -6,20 +6,33 @@ const Constants = {
 
 class Socket {
   constructor(clientId, conn, ns) {
+    this.reset(clientId, conn, ns);
+  }
+
+  setClientId(id) {
+    this.clientId = id;
+  }
+
+  reset(clientId, conn, ns) {
     this.clientId = clientId;
     this.clientInfo = null;
     this.conn = conn;
     this.ns = ns;
+
+    this.closeHandler = null;
+
+    this.connected = true;
 
     this.listeners = new Map();
 
     this.conn.onSocketMessage((message) => {
       this.handle(message.data);
     });
-  }
 
-  setClientId(id) {
-    this.clientId = id;
+    this.conn.onSocketClose((res) => {
+      this.conncted = false;
+      if (this.closeHandler) this.closeHandler();
+    });
   }
 
   setClientInfo(info) {
@@ -27,6 +40,11 @@ class Socket {
   }
 
   on(msg, listener) {
+    if (msg === 'close') {
+      this.closeHandler = listener;
+      return;
+    }
+
     if (!this.listeners.has(msg)) {
       this.listeners.set(msg, []);
     }
@@ -50,6 +68,10 @@ class Socket {
   }
 
   emit(msg, data = {}) {
+    if (!this.connected) {
+      return;
+    }
+
     let payload = {};
     payload[Constants.MSG_TYPE] = msg;
     payload[Constants.CLIENT_ID] = this.clientId;
